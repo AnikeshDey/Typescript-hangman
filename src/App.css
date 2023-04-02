@@ -1,0 +1,155 @@
+.container{
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.title{
+  font-size: 2rem;
+  text-align: center;
+}
+
+.hangman__container{
+  position: relative;
+}
+
+.hangman__hanger-item-4{
+  height: 50px;
+  width: 10px;
+  background: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.hangman__hanger-item-3{
+  height: 10px;
+  width: 200px;
+  background: black;
+  margin-left: 120px;
+}
+
+.hangman__hanger-item-2{
+  height: 400px;
+  width: 10px;
+  background: black;
+  margin-left: 120px;
+}
+
+.hangman__hanger-item-1{
+  height: 10px;
+  width: 250px;
+  background: black;
+}
+
+.hangman__head{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 10px solid black;
+  position: absolute;
+  top: 50px;
+  right: -30px;
+}
+
+.hangman__body{
+  width: 10px;
+  height: 100px;
+  background: black;
+  position: absolute;
+  top: 120px;
+  right: 0;
+}
+
+.hangman__right-arm{
+  width: 100px;
+  height: 10px;
+  background: black;
+  position: absolute;
+  top: 150px;
+  right: -100px;
+  rotate: -30deg;
+  transform-origin: left bottom;
+}
+
+.hangman__left-arm{
+  width: 100px;
+  height: 10px;
+  background: black;
+  position: absolute;
+  top: 150px;
+  right: 10px;
+  rotate: 30deg;
+  transform-origin: right bottom;
+}
+
+.hangman__right-leg{
+  width: 100px;
+  height: 10px;
+  background: black;
+  position: absolute;
+  top: 210px;
+  right: -90px;
+  rotate: 60deg;
+  transform-origin: left bottom;
+}
+
+.hangman__left-leg{
+  width: 100px;
+  height: 10px;
+  background: black;
+  position: absolute;
+  top: 210px;
+  right: 0;
+  rotate: -60deg;
+  transform-origin: right bottom;
+}
+
+.hangmanword__container{
+  display: flex;
+  gap: .25em;
+  font-size: 6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "monospace";
+}
+
+.hangmanword__letter{
+  border-bottom: .1rem solid black;
+}
+
+.keyboard__container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  gap: .5rem;
+}
+
+.keyboard__btn{
+  width: 100%;
+  border: 3px solid black;
+  background: none;
+  aspect-ratio: 1/1;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding: .5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+}
+
+.keyboard__btn.active{
+  background-color: hsl(200, 100%, 75%);
+  color: white;
+}
+
+.keyboard__btn.inactive{
+  opacity: .3;
+}
+
+.keyboard__btn:hover:not(:disabled), .keyboard__btn:focus:not(:disabled) {
+  background-color: hsl(200, 100%, 75%);
+}
+
